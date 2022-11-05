@@ -1,1 +1,3 @@
-alert("yo")
+import loadHome from "./home.js"
+
+loadHome()
