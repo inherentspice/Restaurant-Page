@@ -1,15 +1,8 @@
 
-export default function loadHome() {
-  const cacheDom = () => {
-    const mainDocumentBody = document.getElementById("content")
-    return (
-      mainDocumentBody
-    )
-  }
-
-  const dom = cacheDom()
+export default function loadHome(cached) {
+  const mainContent = cached.mainDocumentBody
   const pageHeading = document.createElement("h1")
-  pageHeading.textContent = "AI Diner"
+  pageHeading.textContent = "AI Restaurant"
   const pageSubHeading = document.createElement("h3")
   pageSubHeading.textContent = "Food for Nobody"
   const menuItem = document.createElement("img")
@@ -17,9 +10,8 @@ export default function loadHome() {
   menuItem.alt = "salmon carnival cake"
   const menuItemTitle = document.createElement("h5")
   menuItemTitle.textContent = "Salmon Carnival Cake"
-  dom.appendChild(pageHeading)
-  dom.appendChild(pageSubHeading)
-  dom.appendChild(menuItem)
-  dom.appendChild(menuItemTitle)
-
+  mainContent.appendChild(pageHeading)
+  mainContent.appendChild(pageSubHeading)
+  mainContent.appendChild(menuItem)
+  mainContent.appendChild(menuItemTitle)
 };
