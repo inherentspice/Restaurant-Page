@@ -46,8 +46,11 @@ export default function Menu(cached) {
     mainContent.appendChild(pageSubHeading)
 
     const menuItemsDiv = document.createElement("div")
+    menuItemsDiv.className = "menu--segment"
+
     menuItems.forEach((item) => {
       const singleMenuItemDiv = document.createElement("div")
+      singleMenuItemDiv.className = "home--segment"
       const menuItem = document.createElement("img")
       menuItem.src = item.src
       menuItem.alt = item.alt

@@ -29,8 +29,10 @@ export default function Contact(cached) {
   mainContent.appendChild(pageSubHeading)
 
   const contactPeopleDiv = document.createElement("div")
+  contactPeopleDiv.className = "contact--segment"
   contactPeople.forEach((person) => {
     const singlePersonDiv = document.createElement("div")
+    singlePersonDiv.className = "home--segment"
     const personName = document.createElement("p")
     personName.textContent = person.name
     const personRole = document.createElement("p")
