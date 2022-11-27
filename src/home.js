@@ -57,6 +57,23 @@ export default function loadHome(cached) {
     }
   ]
 
+  const leadImageDiv = document.createElement("div")
+  leadImageDiv.className = "lead-image-cont"
+  // const leadImage = document.createElement("img")
+  // leadImage.src = "./menu/existential-dread-pancakes.png"
+  // leadImage.alt = "Srumptious pancakes with a dollop of dread"
+  const leadImageTextTitle = document.createElement("p")
+  leadImageTextTitle.textContent = "Existential Dread Pancakes"
+  leadImageTextTitle.className = "lead-image-title"
+  const leadImageSubtitle = document.createElement("p")
+  leadImageSubtitle.textContent = "Mouth-Watering Pancakes with a Dollop of Dread"
+  leadImageSubtitle.className = "lead-image-subtitle"
+  leadImageDiv.appendChild(leadImageTextTitle)
+  leadImageDiv.appendChild(leadImageSubtitle)
+  // leadImageDiv.appendChild(leadImage)
+  mainContent.appendChild(leadImageDiv)
+
+
   segmentContent.forEach((segment) => {
     const restaurantDiv = document.createElement("div")
     restaurantDiv.className = "home--segment"
