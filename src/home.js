@@ -8,19 +8,36 @@ export default function loadHome(cached) {
       "subHeading": "AI Generated Food in the Heart of New Chusan",
       "src": "./menu/ai-restaurant-interior.jpg",
       "alt": "interior of restaurant",
-      "description": "AI Restaurant: God's Favourite Mistake"
+      "description": "AI Restaurant: God's Favourite Mistake.  Ever had? Had to be there at night. \
+       Some of these places open up hours before. I'd leave early to go to the park and/or eat at a \
+       nearby restaurant before going to bed.  It was a lot less convenient to be on your phone at \
+       night. Now, imagine that they will leave hours later at 6am to go home. Same thing happens with \
+       rumpleisure and other places where you can rest assured that you will be there at all times. \
+       It's unfortunate that this happened, but it illustrates the point that there are benefits to \
+       staying in bed at night.  Like bed rest is essential, and if you are going to stay occupied at \
+       night, then the best thing to do is to sleep wherever you want. There are a lot of pros to bed \
+       rest that I've not mentioned here, so just ignore them. No bed. No sheets. No pillow. No chair. \
+       No pillow. Oh, yeah. It’s all relative. Different sounds need different people. Different bed \
+       sheets. Different hair. Different rug. Bed rest is absolutely essential if you want to stay \
+       focused and recover after a difficult day. And if you want to rest after a difficult day, then \
+       help strengthen the bed with your meds. Some people are good at it, some people are not. Some \
+       people tense it too much, some people tense it too late. Some people tense it wrongly, some \
+       people tense it wrongly, some people just don't teach me. Some of these are signs of bad training,\
+       but most of the times I find myself doing things better after correcting my habits.  Like going for \
+       a run/bike rides, doing pushups, standing in line, etc.  That sort of thing.  So I find myself doing \
+       these habits after correcting my habits, and the more I correct my routines the better I get.  Like \
+       hammering away at my problem, the more I find the motivation to fix them.  This is a very personal \
+       kind of training, and I would like to think that there are people who are still not good at it after \
+       correcting their routines.  Helping out is often about helping people, not about learning from them.  \
+       Most of us are still not good at it, but it's very important to learn from those people.  It's not \
+       easy to do, but it's not impossible.  Thanks for the motivation!"
     },
     {
       "heading": "Today's Special",
       "subHeading": "Salmon Carnival Cake",
       "src": "./menu/salmon-cake.png",
       "alt": "salmon cake",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, \
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim \
-      ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex \
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit \
-      esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat \
-      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "description": " Totally makes me happy and makes setting aside money for my birthday an option."
     },
     {
       "heading": "Meet Our Chef",
