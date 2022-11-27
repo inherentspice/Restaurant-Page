@@ -2,7 +2,7 @@ body {
   margin: 0;
   --secondary-color: rgb(253, 243, 245);
   --grey-1: rgb(90, 90, 90);
-  --primary-color: rgb(247, 243, 251);
+  --primary-color: rgb(243, 180, 190);
   background-color: var(--secondary-color);
   color: var(--grey-1);
 }
@@ -52,6 +52,35 @@ body {
   gap: 3rem;
 }
 
+.lead-image-cont {
+  min-width: 100%;
+  min-height: 100vh;
+  background-image: url("./menu/existential-dread-pancakes.png");
+  background-size: cover;
+  background-blend-mode: color-dodge;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lead-image-title {
+  font-size: 5rem;
+  font-weight: 800;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  padding: 1rem;
+  border-radius: 0px 124px 124px 0px;
+}
+
+.lead-image-subtitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  padding: 0.75rem;
+  border-radius: 0px 124px 124px 0px;
+}
 .home--segment {
   width: 80%;
   display: flex;
