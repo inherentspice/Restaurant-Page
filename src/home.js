@@ -1,3 +1,5 @@
+import loadMenu from "./menu.js"
+import reload from "./reload.js"
 
 export default function loadHome(cached) {
   const mainContent = cached.mainDocumentBody
@@ -59,18 +61,21 @@ export default function loadHome(cached) {
 
   const leadImageDiv = document.createElement("div")
   leadImageDiv.className = "lead-image-cont"
-  // const leadImage = document.createElement("img")
-  // leadImage.src = "./menu/existential-dread-pancakes.png"
-  // leadImage.alt = "Srumptious pancakes with a dollop of dread"
   const leadImageTextTitle = document.createElement("p")
   leadImageTextTitle.textContent = "Existential Dread Pancakes"
   leadImageTextTitle.className = "lead-image-title"
   const leadImageSubtitle = document.createElement("p")
   leadImageSubtitle.textContent = "Mouth-Watering Pancakes with a Dollop of Dread"
   leadImageSubtitle.className = "lead-image-subtitle"
+  const menuButton = document.createElement("button")
+  menuButton.innerText = "Click here for more menu items"
+  menuButton.addEventListener("click", () => {
+    reload(cached)
+    loadMenu(cached)
+  })
   leadImageDiv.appendChild(leadImageTextTitle)
   leadImageDiv.appendChild(leadImageSubtitle)
-  // leadImageDiv.appendChild(leadImage)
+  leadImageDiv.appendChild(menuButton)
   mainContent.appendChild(leadImageDiv)
 
 
