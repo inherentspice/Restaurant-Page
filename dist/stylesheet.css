@@ -71,6 +71,8 @@ body {
   background-color: var(--primary-color);
   padding: 1rem;
   border-radius: 0px 124px 124px 0px;
+  animation: 0.8s ease-in pageload;
+  opacity: 100%;
 }
 
 .lead-image-subtitle {
@@ -80,7 +82,20 @@ body {
   background-color: var(--primary-color);
   padding: 0.75rem;
   border-radius: 0px 124px 124px 0px;
+  animation: 0.8s ease-in pageload;
+  opacity: 100%;
 }
+
+@keyframes pageload {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
 .home--segment {
   width: 80%;
   display: flex;
