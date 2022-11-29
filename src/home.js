@@ -5,10 +5,22 @@ export default function loadHome(cached) {
   const mainContent = cached.mainDocumentBody
 
   const imageDivData = [
-    {"src": "./menu/cheese-soda.png"},
-    {"src": "./menu/ant-cocktail.png"},
-    {"src": "./menu/blood-margarita.png"},
-    {"src": "./menu/poison-cocktail.png"}
+    {
+      "src": "./menu/cheese-soda.png",
+      "text": "cheese soda"
+    },
+    {
+      "src": "./menu/ant-cocktail.png",
+      "text": "ant cocktail"
+    },
+    {
+      "src": "./menu/blood-margarita.png",
+      "text": "blood margarita"
+    },
+    {
+      "src": "./menu/poison-cocktail.png",
+      "text": "poison cocktail"
+    }
   ]
   // const segmentContent = [
   //   {
@@ -121,16 +133,28 @@ export default function loadHome(cached) {
   // create div display of restaurants drinks
   const drinkImagesDiv = document.createElement("div")
   drinkImagesDiv.className = "drink-images-cont"
-  imageDivData.forEach((image) => {
+
+
+  imageDivData.forEach((image, index) => {
     const drinkImageDiv = document.createElement("div")
-    drinkImageDiv.className = "drink-image-cont"
+    drinkImageDiv.className = `drink-image-cont box-${index}`
     const drinkImage = document.createElement("img")
     drinkImage.src = image.src
+    const drinkText = document.createElement("p")
+    drinkText.className = "drink-text"
+    drinkText.textContent = image.text
     drinkImageDiv.appendChild(drinkImage)
+    drinkImageDiv.appendChild(drinkText)
     drinkImagesDiv.appendChild(drinkImageDiv)
     mainContent.appendChild(drinkImagesDiv)
   })
 
+  drinkImagesDiv.addEventListener("click", () => {
+    if (drinkImagesDiv.className !== "drink-images-cont spread") {
+      drinkImagesDiv.className += " spread"
+      drinkImagesDiv.childNodes.forEach((item) => item.className += " spread")
+    }
+  })
   // segmentContent.forEach((segment) => {
   //   const restaurantDiv = document.createElement("div")
   //   restaurantDiv.className = segment.className
