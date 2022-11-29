@@ -5,19 +5,19 @@ export default function Contact(cached) {
       "name": "Roberto Roboto",
       "role": "Head Chef",
       "phoneNumber": "010-101-0101",
-      "email": "cannotpasscaptcha@falsereality.com"
+      "email": "cannotpasscaptcha@falseemail.com"
     },
     {
       "name": "Walter Wiring",
       "role": "Manager",
       "phoneNumber": "010-101-0100",
-      "email": "binaryboy@falsereality.com"
+      "email": "binaryboy@falseemail.com"
     },
     {
       "name": "Bottholomew Bot",
       "role": "Chief Vision Weaver",
       "phoneNumber": "010-101-1000",
-      "email": "l33thack3r@falsereality.com"
+      "email": "l33thack3r@falseemail.com"
     }
   ]
   const mainContent = cached.mainDocumentBody
