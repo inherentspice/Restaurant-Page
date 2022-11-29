@@ -22,65 +22,6 @@ export default function loadHome(cached) {
       "text": "poison cocktail"
     }
   ]
-  // const segmentContent = [
-  //   {
-  //     "heading": "AI Restaurant",
-  //     "subHeading": "Proudly Serving AI Generated Food in the Heart of New Chusan since 2024",
-  //     "src": "./menu/ai-restaurant-interior.jpg",
-  //     "alt": "interior of restaurant",
-  //     "description": "AI Restaurant: God's Favourite Mistake.  Ever had? Had to be there at night. \
-  //      Some of these places open up hours before. I'd leave early to go to the park and/or eat at a \
-  //      nearby restaurant before going to bed.  It was a lot less convenient to be on your phone at \
-  //      night. Now, imagine that they will leave hours later at 6am to go home. Same thing happens with \
-  //      rumpleisure and other places where you can rest assured that you will be there at all times. \
-  //      It's unfortunate that this happened, but it illustrates the point that there are benefits to \
-  //      staying in bed at night.  Like bed rest is essential, and if you are going to stay occupied at \
-  //      night, then the best thing to do is to sleep wherever you want. There are a lot of pros to bed \
-  //      rest that I've not mentioned here, so just ignore them. No bed. No sheets. No pillow. No chair. \
-  //      No pillow. Oh, yeah. It’s all relative. Different sounds need different people. Different bed \
-  //      sheets. Different hair. Different rug. Bed rest is absolutely essential if you want to stay \
-  //      focused and recover after a difficult day. And if you want to rest after a difficult day, then \
-  //      help strengthen the bed with your meds. Some people are good at it, some people are not. Some \
-  //      people tense it too much, some people tense it too late. Some people tense it wrongly, some \
-  //      people tense it wrongly, some people just don't teach me. Some of these are signs of bad training,\
-  //      but most of the times I find myself doing things better after correcting my habits.  Like going for \
-  //      a run/bike rides, doing pushups, standing in line, etc.  That sort of thing.  So I find myself doing \
-  //      these habits after correcting my habits, and the more I correct my routines the better I get.  Like \
-  //      hammering away at my problem, the more I find the motivation to fix them.  This is a very personal \
-  //      kind of training, and I would like to think that there are people who are still not good at it after \
-  //      correcting their routines.  Helping out is often about helping people, not about learning from them.  \
-  //      Most of us are still not good at it, but it's very important to learn from those people.  It's not \
-  //      easy to do, but it's not impossible.  Thanks for the motivation!",
-  //      "className": "home-segment alt"
-  //   },
-  //   {
-  //     "heading": "Today's Special",
-  //     "subHeading": "Salmon Carnival Cake",
-  //     "src": "./menu/salmon-cake.png",
-  //     "alt": "salmon cake",
-  //     "description": " Totally makes me happy and makes setting aside money for my birthday an option.",
-  //     "className": "home-segment"
-  //   },
-  //   {
-  //     "heading": "Meet Our Chef",
-  //     "subHeading": "Roberto Roboto",
-  //     "src": "./menu/ai-restaurant-chef.png",
-  //     "alt": "an ai generated image of a chef",
-  //     "description": "Nibh nisl condimentum id venenatis. Leo in vitae turpis massa sed \
-  //     elementum tempus egestas. Tempus urna et pharetra pharetra massa massa ultricies mi \
-  //     quis. Euismod in pellentesque massa placerat duis. Aliquet risus feugiat in ante metus \
-  //     dictum at tempor. Diam quam nulla porttitor massa id. Gravida quis blandit turpis \
-  //     cursus in hac habitasse platea dictumst. Integer enim neque volutpat ac. Maecenas \
-  //     volutpat blandit aliquam etiam erat velit scelerisque. Luctus accumsan tortor posuere \
-  //     ac ut consequat semper. Ullamcorper eget nulla facilisi etiam dignissim diam quis. Duis \
-  //     ut diam quam nulla porttitor massa. Amet dictum sit amet justo donec enim diam vulputate \
-  //     ut. Luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. Condimentum id \
-  //     venenatis a condimentum vitae sapien.",
-  //     "className": "home-segment alt"
-  //   }
-  // ]
-
-  // create banner image of a dish
 
   const leadImageDiv = document.createElement("div")
   leadImageDiv.className = "lead-image-cont"
@@ -149,28 +90,43 @@ export default function loadHome(cached) {
     mainContent.appendChild(drinkImagesDiv)
   })
 
+  // event listener so that on click the drinks go from stacked on top
+  // to laid out in a line
   drinkImagesDiv.addEventListener("click", () => {
     if (drinkImagesDiv.className !== "drink-images-cont spread") {
       drinkImagesDiv.className += " spread"
       drinkImagesDiv.childNodes.forEach((item) => item.className += " spread")
     }
   })
-  // segmentContent.forEach((segment) => {
-  //   const restaurantDiv = document.createElement("div")
-  //   restaurantDiv.className = segment.className
-  //   const restaurantHeading = document.createElement("h1")
-  //   restaurantHeading.textContent = segment.heading
-  //   const restaurantSubHeading = document.createElement("h3")
-  //   restaurantSubHeading.textContent = segment.subHeading
-  //   const restaurantPicture = document.createElement("img")
-  //   restaurantPicture.src = segment.src
-  //   restaurantPicture.alt = segment.alt
-  //   const restaurantTitle = document.createElement("h5")
-  //   restaurantTitle.textContent = segment.description
-  //   restaurantDiv.appendChild(restaurantHeading)
-  //   restaurantDiv.appendChild(restaurantSubHeading)
-  //   restaurantDiv.appendChild(restaurantPicture)
-  //   restaurantDiv.appendChild(restaurantTitle)
-  //   mainContent.appendChild(restaurantDiv)
-  // })
+
+  // create div of information about the restaurant's chef
+  const chefDiv = document.createElement("div")
+  chefDiv.className = "home-segment alt"
+  const chefImageDiv = document.createElement("div")
+  chefImageDiv.className = "image-cont"
+  const chefImage = document.createElement("img")
+  chefImage.src = "./menu/ai-restaurant-chef.png"
+  const chefDescriptionDiv = document.createElement("div")
+  chefDescriptionDiv.className = "description-cont"
+  const chefHeading = document.createElement("h1")
+  chefHeading.textContent = "Meet Our Chef"
+  const chefSubHeading = document.createElement("h3")
+  chefSubHeading.textContent = "Roberto Roboto"
+  const chefText = document.createElement("p")
+  chefText.textContent = "Roberto attended cooking school in France at the Maulin De Morgan's Restaurant \
+  on the now disappeared French Riviera. Now, he was taken New Chusan by storm. If he isn't plugged into \
+  his designated Cool-Tech brand charging station, you'll find him behind the stove, creating affronts \
+  to nature / dreams."
+  // const restaurantTextParaTwo = document.createElement("p")
+  // restaurantTextParaTwo.textContent = "Whether it be skirting perfection with our Salmon Carnival Cake, or defying \
+  // the laws of god and man with our signature Narwal Surprise Burger: we gaurantee that when you leave AI Restaurant, \
+  // you leave with a story."
+  chefImageDiv.appendChild(chefImage)
+  chefDescriptionDiv.appendChild(chefHeading)
+  chefDescriptionDiv.appendChild(chefSubHeading)
+  chefDescriptionDiv.appendChild(chefText)
+  // restaurantDescriptionDiv.appendChild(chefTextParaTwo)
+  chefDiv.appendChild(chefDescriptionDiv)
+  chefDiv.appendChild(chefImageDiv)
+  mainContent.appendChild(chefDiv)
 };
