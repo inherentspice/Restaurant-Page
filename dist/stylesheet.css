@@ -270,3 +270,18 @@ p {
   flex-direction: column;
   align-items: center;
 }
+
+/* footer */
+.footer-cont {
+  width: 100%;
+  background-color: var(--secondary-highlight);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-cont>p {
+  color: var(--primary-light);
+  font-weight: 300;
+}
