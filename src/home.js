@@ -7,7 +7,7 @@ export default function loadHome(cached) {
   const segmentContent = [
     {
       "heading": "AI Restaurant",
-      "subHeading": "AI Generated Food in the Heart of New Chusan",
+      "subHeading": "Proudly Serving AI Generated Food in the Heart of New Chusan since 2024",
       "src": "./menu/ai-restaurant-interior.jpg",
       "alt": "interior of restaurant",
       "description": "AI Restaurant: God's Favourite Mistake.  Ever had? Had to be there at night. \
@@ -32,14 +32,16 @@ export default function loadHome(cached) {
        kind of training, and I would like to think that there are people who are still not good at it after \
        correcting their routines.  Helping out is often about helping people, not about learning from them.  \
        Most of us are still not good at it, but it's very important to learn from those people.  It's not \
-       easy to do, but it's not impossible.  Thanks for the motivation!"
+       easy to do, but it's not impossible.  Thanks for the motivation!",
+       "className": "home-segment alt"
     },
     {
       "heading": "Today's Special",
       "subHeading": "Salmon Carnival Cake",
       "src": "./menu/salmon-cake.png",
       "alt": "salmon cake",
-      "description": " Totally makes me happy and makes setting aside money for my birthday an option."
+      "description": " Totally makes me happy and makes setting aside money for my birthday an option.",
+      "className": "home-segment"
     },
     {
       "heading": "Meet Our Chef",
@@ -55,7 +57,8 @@ export default function loadHome(cached) {
       ac ut consequat semper. Ullamcorper eget nulla facilisi etiam dignissim diam quis. Duis \
       ut diam quam nulla porttitor massa. Amet dictum sit amet justo donec enim diam vulputate \
       ut. Luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. Condimentum id \
-      venenatis a condimentum vitae sapien."
+      venenatis a condimentum vitae sapien.",
+      "className": "home-segment alt"
     }
   ]
 
@@ -82,7 +85,7 @@ export default function loadHome(cached) {
 
   segmentContent.forEach((segment) => {
     const restaurantDiv = document.createElement("div")
-    restaurantDiv.className = "home--segment"
+    restaurantDiv.className = segment.className
     const restaurantHeading = document.createElement("h1")
     restaurantHeading.textContent = segment.heading
     const restaurantSubHeading = document.createElement("h3")
