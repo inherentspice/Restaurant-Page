@@ -3,6 +3,7 @@ body {
   --secondary-color: rgb(253, 243, 245);
   --grey-1: rgb(90, 90, 90);
   --primary-color: rgb(243, 180, 190);
+  --primary-highlight: rgb(243, 152, 167);
   background-color: var(--secondary-color);
   color: var(--grey-1);
 }
@@ -11,8 +12,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(253, 253, 253);
-  border-bottom: 3px solid rgb(243, 180, 190);
+  background-color: var(--secondary-color);
+  border-bottom: 3px solid var(--primary-color);
   padding: 0.75rem;
 }
 
@@ -21,6 +22,16 @@ body {
   gap: 10px;
 }
 
+.header--text>div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header--text>div>h4 {
+  margin: 0;
+  font-size: 1.3rem;
+}
 .header--text>div>img {
   height: 112px;
   border-radius: 20%;
@@ -33,23 +44,24 @@ body {
 
 #page--navigation>button {
   height: 5rem;
-  width: 8rem;
   font-size: 2rem;
   border: none;
-  background-color: rgb(255, 212, 219);
-  box-shadow: 2px 1px 1px 1px rgb(243, 180, 190);
+  background-color: var(--primary-color);
+  box-shadow: 2px 1px 1px 1px var(--secondary-color);
   cursor: pointer;
+  color: var(--secondary-color);
+  font-weight: 700;
+  padding: 1rem;
 }
 
 #page--navigation>button:hover {
-  background-color: rgb(243, 180, 190);
+  background-color: var(--primary-highlight);
 }
 
 #content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
 }
 
 .lead-image-cont {
@@ -76,7 +88,7 @@ body {
 }
 
 .lead-image-subtitle {
-  font-size: 3rem;
+  font-size: 2.3rem;
   font-weight: 700;
   color: var(--secondary-color);
   background-color: var(--primary-color);
@@ -97,12 +109,9 @@ body {
 }
 
 .home--segment {
-  width: 80%;
   display: flex;
   flex-direction: column;
-  border: 5px solid white;
   padding: 0.75rem;
-  margin: 1.25rem;
   align-items: center;
   background-color: var(--primary-color);
 }
