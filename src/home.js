@@ -44,7 +44,7 @@ export default function loadHome(cached) {
   leadImageDiv.appendChild(menuButton)
   mainContent.appendChild(leadImageDiv)
 
-  // create description of the restaurant
+  // create div that describes the restaurant
   const restaurantDiv = document.createElement("div")
   restaurantDiv.className = "home-segment alt"
   const restaurantImageDiv = document.createElement("div")
@@ -118,15 +118,10 @@ export default function loadHome(cached) {
   on the now disappeared French Riviera. Now, he was taken New Chusan by storm. If he isn't plugged into \
   his designated Cool-Tech brand charging station, you'll find him behind the stove, creating affronts \
   to nature / dreams."
-  // const restaurantTextParaTwo = document.createElement("p")
-  // restaurantTextParaTwo.textContent = "Whether it be skirting perfection with our Salmon Carnival Cake, or defying \
-  // the laws of god and man with our signature Narwal Surprise Burger: we gaurantee that when you leave AI Restaurant, \
-  // you leave with a story."
   chefImageDiv.appendChild(chefImage)
   chefDescriptionDiv.appendChild(chefHeading)
   chefDescriptionDiv.appendChild(chefSubHeading)
   chefDescriptionDiv.appendChild(chefText)
-  // restaurantDescriptionDiv.appendChild(chefTextParaTwo)
   chefDiv.appendChild(chefDescriptionDiv)
   chefDiv.appendChild(chefImageDiv)
   mainContent.appendChild(chefDiv)
