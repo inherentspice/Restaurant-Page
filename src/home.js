@@ -63,10 +63,10 @@ export default function loadHome(cached) {
   leadImageDiv.className = "lead-image-cont"
   const leadImageTextTitle = document.createElement("p")
   leadImageTextTitle.textContent = "Existential Dread Pancakes"
-  leadImageTextTitle.className = "lead-image-title"
+  leadImageTextTitle.className = "lead-image-title lead-image"
   const leadImageSubtitle = document.createElement("p")
   leadImageSubtitle.textContent = "Mouth-Watering Pancakes with a Dollop of Dread"
-  leadImageSubtitle.className = "lead-image-subtitle"
+  leadImageSubtitle.className = "lead-image-subtitle lead-image"
   const menuButton = document.createElement("button")
   menuButton.className = "lead-image-menu-btn"
   menuButton.innerText = "Click here for more menu items"
