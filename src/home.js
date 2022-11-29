@@ -1,5 +1,6 @@
 import loadMenu from "./menu.js"
 import reload from "./reload.js"
+import footer from "./footer.js"
 
 export default function loadHome(cached) {
   const mainContent = cached.mainDocumentBody
@@ -129,4 +130,6 @@ export default function loadHome(cached) {
   chefDiv.appendChild(chefDescriptionDiv)
   chefDiv.appendChild(chefImageDiv)
   mainContent.appendChild(chefDiv)
+
+  footer(cached)
 };
