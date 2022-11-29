@@ -68,6 +68,7 @@ export default function loadHome(cached) {
   leadImageSubtitle.textContent = "Mouth-Watering Pancakes with a Dollop of Dread"
   leadImageSubtitle.className = "lead-image-subtitle"
   const menuButton = document.createElement("button")
+  menuButton.className = "lead-image-menu-btn"
   menuButton.innerText = "Click here for more menu items"
   menuButton.addEventListener("click", () => {
     reload(cached)
