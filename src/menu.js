@@ -42,27 +42,34 @@ export default function Menu(cached) {
     const mainContent = cached.mainDocumentBody
     const pageHeading = document.createElement("h1")
     pageHeading.textContent = "Menu"
+    pageHeading.className = "menu-heading"
     const pageSubHeading = document.createElement("h3")
     pageSubHeading.textContent = "A Smorgasbord of Sadness"
+    pageSubHeading.className = "menu-subheading"
     mainContent.appendChild(pageHeading)
     mainContent.appendChild(pageSubHeading)
 
     const menuItemsDiv = document.createElement("div")
-    menuItemsDiv.className = "menu--segment"
+    menuItemsDiv.className = "menu-segment"
 
-    menuItems.forEach((item) => {
+    menuItems.forEach((item, index) => {
       const singleMenuItemDiv = document.createElement("div")
-      singleMenuItemDiv.className = "home--segment"
+      singleMenuItemDiv.className = "menu-item-cont"
+      singleMenuItemDiv.id =  `item-number-${index}`
       const menuItem = document.createElement("img")
       menuItem.src = item.src
       menuItem.alt = item.alt
       const menuItemTitle = document.createElement("h5")
       menuItemTitle.textContent = item.itemName
+      const textContainer = document.createElement("div")
+      textContainer.className = "menu-item-description"
+      textContainer.appendChild(menuItemTitle)
+      singleMenuItemDiv.appendChild(textContainer)
       singleMenuItemDiv.appendChild(menuItem)
-      singleMenuItemDiv.appendChild(menuItemTitle)
       menuItemsDiv.appendChild(singleMenuItemDiv)
     })
     mainContent.appendChild(menuItemsDiv)
+
 
     footer(cached)
 };
