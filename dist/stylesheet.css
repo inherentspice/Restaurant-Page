@@ -259,10 +259,58 @@ p {
   display: none;
 }
 
-.menu--segment {
+/* menu */
+.menu-segment {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-bottom: 1.25rem;
+}
+
+.menu-heading {
+  color: var(--primary-color);
+}
+
+.menu-subheading {
+  color: var(--secondary-highlight);
+}
+
+.menu-item-cont {
+  position: relative;
+}
+.menu-item-cont>img {
+  max-width: 300px;
+}
+
+.menu-item-description {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  background-color: var(--secondary-highlight);
+  color: var(--primary-light);
   display: flex;
-  flex-direction: column;
   align-items: center;
+}
+
+.menu-item-description:hover {
+  opacity: 90%;
+  animation: 0.8s ease-in-out menudisplay;
+}
+
+.menu-item-description>h5 {
+  font-size: 4rem;
+  font-weight: 900;
+  color:rgb(243, 152, 167);
+}
+
+@keyframes menudisplay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 90%;
+  }
 }
 
 .contact--segment {
