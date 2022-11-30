@@ -76,7 +76,6 @@ export default function loadHome(cached) {
   const drinkImagesDiv = document.createElement("div")
   drinkImagesDiv.className = "drink-images-cont"
 
-
   imageDivData.forEach((image, index) => {
     const drinkImageDiv = document.createElement("div")
     drinkImageDiv.className = `drink-image-cont box-${index}`
@@ -99,6 +98,8 @@ export default function loadHome(cached) {
       drinkImagesDiv.childNodes.forEach((item) => item.className += " spread")
     }
   })
+
+
 
   // create div of information about the restaurant's chef
   const chefDiv = document.createElement("div")

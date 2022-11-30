@@ -1,3 +1,5 @@
+import footer from "./footer"
+
 export default function Contact(cached) {
   console.log("here")
   const contactPeople = [
@@ -50,4 +52,5 @@ export default function Contact(cached) {
 
   mainContent.appendChild(contactPeopleDiv)
 
+  footer(cached)
 }
