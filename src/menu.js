@@ -1,3 +1,5 @@
+import footer from "./footer"
+
 export default function Menu(cached) {
     const menuItems = [
       {
@@ -62,4 +64,5 @@ export default function Menu(cached) {
     })
     mainContent.appendChild(menuItemsDiv)
 
+    footer(cached)
 };
