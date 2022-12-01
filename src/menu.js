@@ -36,6 +36,16 @@ export default function Menu(cached) {
         "src": "./menu/yellow-curry-with-poodles.png",
         "alt": "yellow curry with chunks of mystery meat",
         "itemName": "Yellow Curry w/ Poodle"
+      },
+      {
+        "src": "./menu/fettucini-alfredo-blue.png",
+        "alt": "alfredo with mystery blue",
+        "itemName": "Fettucini Alfredo w/ Blue"
+      },
+      {
+        "src": "./menu/forever-burning-chicken.png",
+        "alt": "cooking chicken with six legs",
+        "itemName": "Forever Burning Chicken"
       }
     ]
 
