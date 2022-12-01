@@ -25,16 +25,18 @@ export default function Contact(cached) {
   const mainContent = cached.mainDocumentBody
   const pageHeading = document.createElement("h1")
   pageHeading.textContent = "Contact Us"
+  pageHeading.className = "contact-heading"
   const pageSubHeading = document.createElement("h3")
   pageSubHeading.textContent = "A Being that is Totally Not a Bot Will Get Back to You"
+  pageSubHeading.className = "contact-subheading"
   mainContent.appendChild(pageHeading)
   mainContent.appendChild(pageSubHeading)
 
   const contactPeopleDiv = document.createElement("div")
-  contactPeopleDiv.className = "contact--segment"
+  contactPeopleDiv.className = "contact-segment"
   contactPeople.forEach((person) => {
     const singlePersonDiv = document.createElement("div")
-    singlePersonDiv.className = "home--segment"
+    singlePersonDiv.className = "contact-cont"
     const personName = document.createElement("p")
     personName.textContent = person.name
     const personRole = document.createElement("p")
