@@ -74,7 +74,7 @@ p {
   font-size: 2rem;
   border: none;
   background-color: var(--primary-color);
-  box-shadow: 2px 1px 1px 1px var(--primary-light);
+  box-shadow: 2px 1px 1px 1px var(--primary-highlight);
   cursor: pointer;
   color: var(--primary-light);
   font-weight: 700;
@@ -83,6 +83,17 @@ p {
 
 #page--navigation>button:hover {
   background-color: var(--primary-highlight);
+  animation: 0.3s ease-in button-press;
+}
+
+@keyframes button-press {
+  from {
+    background-color: var(--primary-color);
+  }
+  to {
+    background-color: var(--primary-highlight);
+  }
+
 }
 
 #content {
