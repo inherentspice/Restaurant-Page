@@ -372,6 +372,14 @@ img {
   }
 }
 
+/* menu mobile */
+
+@media (max-width: 1000px) {
+  .menu-segment {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 /* contact */
 
 .contact-segment {
@@ -409,6 +417,11 @@ img {
   }
 }
 
+/* contact mobile */
+
+@media (max-width: 1000px) {
+
+}
 /* footer */
 .footer-cont {
   width: 100%;
